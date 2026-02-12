@@ -98,7 +98,7 @@ export default function Scene2_Origin() {
                         <img
                             src="/probir.jpg"
                             alt="Probir Saha Shohom"
-                            className="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+                            className="w-full h-full object-cover transition-all duration-700"
                         />
                     </div>
                 </div>

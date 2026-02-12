@@ -6,7 +6,6 @@ import Scene3_ForgeACME from './components/scenes/Scene3_ForgeACME'
 import Scene4_Projects from './components/scenes/Scene4_Projects'
 import Scene5_Craft from './components/scenes/Scene5_Craft'
 import Scene6_Future from './components/scenes/Scene6_Future'
-import Cursor from './components/ui/Cursor'
 import Navbar from './components/ui/Navbar'
 import Preloader from './components/ui/Preloader'
 
@@ -18,7 +17,6 @@ function App() {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
 
       <Navbar loading={loading} />
-      <Cursor />
       <div className="grain"></div>
 
       <main className="bg-[#050505] min-h-screen text-white selection:bg-teal-500 selection:text-black">

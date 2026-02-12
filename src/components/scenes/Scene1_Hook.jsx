@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { content } from '../../data/content'
+import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 export default function Scene1_Hook() {
     const containerRef = useRef(null)
@@ -145,11 +146,24 @@ export default function Scene1_Hook() {
                 </p>
 
                 {/* CTA Button */}
-                <div className="hero-cta mt-16">
+                <div className="hero-cta mt-16 flex flex-col items-center gap-8">
                     <a href="#works" className="magnetic-wrap group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-gray-700/50 rounded-full overflow-hidden hover:border-teal-500/50 transition-colors duration-500">
                         <span className="relative z-10 font-mono text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors duration-300">Explore Work</span>
                         <div className="absolute inset-0 bg-teal-500/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out"></div>
                     </a>
+
+                    {/* Social Icons */}
+                    <div className="flex items-center gap-8 transition-opacity duration-300">
+                        <a href={content.contact.linkedin} target="_blank" rel="noreferrer" className="text-gray-500 hover:text-teal-500 transition-colors duration-300">
+                            <FaLinkedinIn size={20} />
+                        </a>
+                        <a href={content.contact.github} target="_blank" rel="noreferrer" className="text-gray-500 hover:text-teal-500 transition-colors duration-300">
+                            <FaGithub size={20} />
+                        </a>
+                        <a href={`mailto:${content.contact.email}`} className="text-gray-500 hover:text-teal-500 transition-colors duration-300">
+                            <FaEnvelope size={20} />
+                        </a>
+                    </div>
                 </div>
             </div>
 
