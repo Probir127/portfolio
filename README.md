@@ -1,16 +1,77 @@
-# React + Vite
+# 🧑‍💻 Probir Saha Shohom — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal developer portfolio showcasing projects, skills, and experience in AI systems, full-stack development, and Python automation. Built with React and Vite, deployed on Vercel.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=flat&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38BDF8?style=flat&logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat&logo=vercel)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+```bash
+# Clone the repo
+git clone https://github.com/Probir127/portfolio.git
+cd portfolio
 
-## Expanding the ESLint configuration
+# Install dependencies
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Start dev server
+npm run dev
+```
+
+Visit: `http://localhost:5173`
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI and component structure |
+| Vite | Build tool and HMR dev server |
+| Tailwind CSS | Styling and layout |
+| Vercel | Hosting and deployment |
+
+---
+
+## 🗂️ Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── assets/        # Images and static files
+│   ├── App.jsx        # Root component
+│   └── main.jsx       # Entry point
+├── public/
+├── index.html
+└── package.json
+```
+
+---
+
+## 🚢 Deployment
+
+```bash
+npm run build
+# Deploy dist/ folder to Vercel
+```
+
+---
+
+## 👤 About Me
+
+I'm Probir Saha Shohom — an AI Systems Builder and Full-Stack Developer based in Dhaka, Bangladesh. I build intelligent backend systems using Python, FastAPI, RAG, and Django, with real-world deployments at client scale.
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/probir-saha-shohom-b01868280/)
+- 🐙 [GitHub](https://github.com/Probir127)
+
+---
+
+## 📝 License
+
+MIT License
