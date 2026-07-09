@@ -8,13 +8,35 @@ import Scene5_Craft from './components/scenes/Scene5_Craft'
 import Scene6_Future from './components/scenes/Scene6_Future'
 import Navbar from './components/ui/Navbar'
 import Preloader from './components/ui/Preloader'
+import Cursor from './components/ui/Cursor'
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        setScrollProgress((window.scrollY / totalScroll) * 100);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <SmoothScroll>
       {loading && <Preloader onComplete={() => setLoading(false)} />}
+      
+      {/* Scroll Progress Bar */}
+      <div 
+        className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-teal-500 to-indigo-500 z-[9999] pointer-events-none transition-all duration-100 ease-out origin-left"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
+      {/* Custom Cursor */}
+      {!loading && <Cursor />}
 
       <Navbar loading={loading} />
       <div className="grain"></div>
@@ -43,3 +65,4 @@ function App() {
 }
 
 export default App
+

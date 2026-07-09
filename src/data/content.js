@@ -8,11 +8,11 @@ export const content = {
     },
     origin: {
         title: "The Origin",
-        summary: "Backend-focused Python developer with hands-on internship experience in HR technology solutions. Strong grasp of REST APIs, clean code, and backend fundamentals. Completed a three-month internship at ACME.AI, contributing to data-oriented and logic-driven systems. Currently pursuing a Diploma in Computer Science and aiming to grow into a backend or AI-focused engineering role.",
+        summary: "Backend-focused Python developer with hands-on internship experience in HR technology solutions. Strong grasp of REST APIs, clean code, and backend fundamentals. Completed a three-month internship at ACME.AI, contributing to data-oriented and logic-driven systems. Completed a Diploma in Computer Science and aiming to grow into a backend or AI-focused engineering role.",
         quote: "Background in scalable systems and logic-driven development.",
         timeline: [
             { year: "2021", event: "Secondary School Certificate (SSC)", desc: "Momtaz Uddin Business Management College." },
-            { year: "2022 – 2026", event: "Diploma in Computer Science", desc: "Ahsanullah Institute of Technical & Vocational Education (AIVET). (Ongoing)" },
+            { year: "2022 – 2025", event: "Diploma in Computer Science", desc: "Ahsanullah Institute of Technical & Vocational Education (AIVET). (Completed)" },
             { year: "2026", event: "The Leap", desc: "Completed Internship at ACME.AI. Transitioning into professional Backend & AI Engineering roles." }
         ]
     },
@@ -70,6 +70,37 @@ export const content = {
         ]
     },
     projects: [
+        
+        {
+            title: "E-Commerce",
+            repoName: "e-commerce-",
+            desc: "Backend features and product management using Django with HTML/CSS templates.",
+            tech: ["Python", "Django", "HTML/CSS"],
+            link: "https://github.com/Probir127/e-commerce-",
+            liveLink: "https://rb-trading-akwe.vercel.app/",
+            color: "bg-orange-900",
+            stats: { stars: 0, forks: 0 }
+        },
+        {
+            title: "Cloud Album",
+            repoName: "cloud-album",
+            desc: "Full-stack cloud photo album application with secure authentication, image upload, and album management.",
+            tech: ["Next.js", "Cloudinary", "Prisma"],
+            link: "https://github.com/Probir127/cloud-album",
+            liveLink: "https://cloud-album-delta.vercel.app/",
+            color: "bg-indigo-900",
+            stats: { stars: 0, forks: 0 }
+        },
+         {
+            title: "Landing Page",
+            repoName: "A.T.S",
+            desc: "A professional and modern landing page with clean UI/UX.",
+            tech: ["JavaScript", "Tailwind CSS", "React", "HTML", "CSS"],
+            link: "https://github.com/Probir127/A.T.S",
+            liveLink: "https://a-t-s-eight.vercel.app/",
+            color: "bg-indigo-900",
+            stats: { stars: 0, forks: 0 }
+        },
         {
             title: "HR Chatbot",
             repoName: "HR_chatbot",
@@ -105,15 +136,6 @@ export const content = {
             link: "https://github.com/Probir127/cafe-management-system",
             color: "bg-yellow-900",
             stats: { stars: 0, forks: 0 }
-        },
-        {
-            title: "E-Commerce",
-            repoName: "e-commerce-",
-            desc: "Backend features and product management using Django with HTML/CSS templates.",
-            tech: ["Python", "Django", "HTML/CSS"],
-            link: "https://github.com/Probir127/e-commerce-",
-            color: "bg-orange-900",
-            stats: { stars: 0, forks: 0 }
         }
     ],
     contact: {
@@ -125,7 +147,7 @@ export const content = {
     },
     future: {
         title: "The Next Chapter",
-        text: "Currently pursuing a Diploma in Computer Science and aiming to grow into a backend or AI-focused engineering role.",
+        text: "Completed a Diploma in Computer Science and aiming to grow into a backend or AI-focused engineering role.",
         cta: "Let's build the future together."
     }
 }

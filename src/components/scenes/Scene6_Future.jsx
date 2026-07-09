@@ -9,24 +9,48 @@ export default function Scene6_Future() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.from(".footer-item", {
+            gsap.from('.footer-item', {
                 scrollTrigger: {
-                    trigger: ".footer-grid",
-                    start: "top 95%"
+                    trigger: '.footer-grid',
+                    start: 'top 95%'
                 },
                 y: 50,
                 opacity: 0,
                 stagger: 0.1
             })
 
-            gsap.from(".contact-detail", {
+            gsap.from('.contact-detail', {
                 scrollTrigger: {
-                    trigger: ".contact-grid",
-                    start: "top 90%"
+                    trigger: '.contact-grid',
+                    start: 'top 90%'
                 },
                 y: 20,
                 opacity: 0,
                 stagger: 0.1
+            })
+
+            // Reticle rotation
+            gsap.to('.reticle-outer', {
+                rotation: 360,
+                duration: 8,
+                repeat: -1,
+                ease: 'linear'
+            })
+            gsap.to('.reticle-inner', {
+                rotation: -360,
+                duration: 5,
+                repeat: -1,
+                ease: 'linear'
+            })
+
+            // Orb pulse
+            gsap.to('.cta-orb-glow', {
+                scale: 1.15,
+                opacity: 0.6,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
             })
         }, containerRef)
         return () => ctx.revert()
@@ -42,20 +66,45 @@ export default function Scene6_Future() {
             </div>
 
             <div className="flex-1 flex flex-col items-center justify-center relative z-10">
-                <p className="text-teal-500 font-mono text-sm tracking-widest mb-8">WHATS NEXT?</p>
+                <p className="text-teal-500 font-mono text-sm tracking-widest mb-8">WHAT'S NEXT?</p>
 
                 <h2 className="text-section-title text-center leading-[0.9] mb-16 mix-blend-difference">
                     LET'S <br /> TALK
                 </h2>
 
-                <a href="mailto:sohom5102@gmail.com" className="magnetic-wrap group relative mb-20">
-                    <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-white flex items-center justify-center relative overflow-hidden transition-transform duration-500 hover:scale-110">
-                        <div className="absolute inset-0 bg-teal-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
-                        <span className="relative z-10 text-black font-bold text-xl md:text-2xl group-hover:text-white transition-colors">SAY HELLO</span>
+                {/* Glowing Teal Orb CTA */}
+                <a href={`mailto:${content.contact.email}`} className="group relative mb-20 flex items-center justify-center">
+                    {/* Outer glow pulse */}
+                    <div className="cta-orb-glow absolute w-72 h-72 md:w-80 md:h-80 rounded-full bg-teal-500/10 blur-[40px]"></div>
+
+                    {/* Reticle outer ring */}
+                    <svg className="reticle-outer absolute w-64 h-64 md:w-72 md:h-72" viewBox="0 0 200 200" fill="none">
+                        <circle cx="100" cy="100" r="96" stroke="rgba(20,184,166,0.2)" strokeWidth="1" strokeDasharray="6 10" />
+                        <circle cx="100" cy="4" r="3" fill="rgba(20,184,166,0.6)" />
+                        <circle cx="100" cy="196" r="3" fill="rgba(20,184,166,0.6)" />
+                        <circle cx="4" cy="100" r="3" fill="rgba(20,184,166,0.6)" />
+                        <circle cx="196" cy="100" r="3" fill="rgba(20,184,166,0.6)" />
+                    </svg>
+
+                    {/* Reticle inner ring */}
+                    <svg className="reticle-inner absolute w-48 h-48 md:w-56 md:h-56" viewBox="0 0 200 200" fill="none">
+                        <circle cx="100" cy="100" r="94" stroke="rgba(20,184,166,0.15)" strokeWidth="1" strokeDasharray="2 20" />
+                        <line x1="100" y1="6" x2="100" y2="30" stroke="rgba(20,184,166,0.5)" strokeWidth="1.5" />
+                        <line x1="100" y1="170" x2="100" y2="194" stroke="rgba(20,184,166,0.5)" strokeWidth="1.5" />
+                        <line x1="6" y1="100" x2="30" y2="100" stroke="rgba(20,184,166,0.5)" strokeWidth="1.5" />
+                        <line x1="170" y1="100" x2="194" y2="100" stroke="rgba(20,184,166,0.5)" strokeWidth="1.5" />
+                    </svg>
+
+                    {/* Main orb button */}
+                    <div className="relative z-10 w-44 h-44 md:w-52 md:h-52 rounded-full flex items-center justify-center overflow-hidden border border-teal-500/30 group-hover:border-teal-400/60 transition-all duration-500"
+                        style={{background: 'radial-gradient(circle at 40% 35%, rgba(20,184,166,0.25) 0%, rgba(20,184,166,0.05) 50%, rgba(5,5,5,0.9) 100%)'}}>
+                        {/* Hover fill */}
+                        <div className="absolute inset-0 bg-teal-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out opacity-90"></div>
+                        <span className="relative z-10 text-white font-bold text-xl md:text-2xl tracking-wider group-hover:text-black transition-colors duration-300">SAY HELLO</span>
                     </div>
                 </a>
 
-                {/* Visible Contact Details */}
+                {/* Contact Details */}
                 <div className="contact-grid grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-center">
                     <div className="contact-detail flex flex-col items-center gap-3 group">
                         <div className="p-4 rounded-full bg-gray-900 text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
@@ -110,3 +159,4 @@ export default function Scene6_Future() {
         </section>
     )
 }
+
